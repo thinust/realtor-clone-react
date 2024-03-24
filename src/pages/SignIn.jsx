@@ -29,6 +29,7 @@ export default function SignIn() {
             const userCredential =await signInWithEmailAndPassword(auth,email,password)
 
             if(userCredential.user){
+                toast.success("Sign In successful.")
                 navigate("/");
             }
         } catch (error) {
